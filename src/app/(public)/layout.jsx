@@ -4,7 +4,7 @@ export default function PulicLayout({ children }) {
     return (
         <div>
             <MainNavbar />
-            <main className="bg-blue-400 mt-[65px]">
+            <main className="mt-[66px]">
                 {children}
             </main>
         </div>
