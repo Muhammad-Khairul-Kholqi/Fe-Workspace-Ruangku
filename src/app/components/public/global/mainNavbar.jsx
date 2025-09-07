@@ -39,7 +39,7 @@ export default function MainNavbar() {
                                 />
                             </Link>
 
-                            <ul className="hidden md:flex items-center gap-5 text-gray-700 text-md">
+                            <ul className="hidden md:flex items-center gap-5 text-gray-800 text-md">
                                 {navLinks.map((link) => (
                                     <Link key={link.name} href={link.href} className="hover:text-black">
                                         {link.name}
@@ -91,7 +91,7 @@ export default function MainNavbar() {
                             transition={{ duration: 0.3 }}
                             className="fixed top-0 right-0 h-screen w-3/4 sm:w-1/2 bg-white border-l border-gray-200 px-5 py-6 md:hidden z-50 flex flex-col"
                         >
-                            <ul className="flex flex-col gap-5 font-medium text-gray-700 text-sm">
+                            <ul className="flex flex-col gap-5 font-medium text-gray-800 text-sm">
                                 {navLinks.map((link) => (
                                     <Link key={link.name} href={link.href} className="hover:text-black">
                                         {link.name}
