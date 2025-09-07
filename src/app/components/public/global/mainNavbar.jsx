@@ -12,20 +12,19 @@ export default function MainNavbar() {
 
     const navLinks = [
         { name: "Home", href: "#" },
-        { name: "About", href: "#" },
-        { name: "FAQ", href: "#" },
         { name: "Features", href: "#" },
+        { name: "FAQ", href: "#" },
         { name: "Contact", href: "#" },
     ];
 
     const authLinks = [
-        { name: "Sign In", href: "/signin", className: "border border-gray-200 bg-white px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-50" },
-        { name: "Sign Up", href: "/signup", className: "bg-black px-4 py-2 rounded-lg text-white hover:bg-black/90" },
+        { name: "Sign In", href: "/signin", className: "border border-[#1A1A1C] bg-balck px-4 py-2 rounded-lg text-white hover:bg-[#1A1A1C]/40" },
+        { name: "Sign Up", href: "/signup", className: "bg-[#1A1A1C] px-4 py-2 rounded-lg text-white hover:bg-[#1A1A1C]/90" },
     ];
 
     return (
         <nav className="fixed left-0 right-0 top-0 z-50">
-            <div className="flex justify-center px-5 py-3 bg-white/40 backdrop-blur-2xl border-b border-gray-200">
+            <div className="flex justify-center px-5 py-3 bg-black">
                 <div className="w-full max-w-[1300px]">
                     <div className="flex items-center justify-between">
                         <div className="flex items-center gap-10">
@@ -39,9 +38,9 @@ export default function MainNavbar() {
                                 />
                             </Link>
 
-                            <ul className="hidden md:flex items-center gap-5 text-gray-800 text-md">
+                            <ul className="hidden md:flex items-center gap-5 text-white text-md">
                                 {navLinks.map((link) => (
-                                    <Link key={link.name} href={link.href} className="hover:text-black">
+                                    <Link key={link.name} href={link.href}>
                                         {link.name}
                                     </Link>
                                 ))}
@@ -63,9 +62,9 @@ export default function MainNavbar() {
 
                             <button
                                 onClick={() => setIsOpen(true)}
-                                className="md:hidden p-2 rounded-lg border border-gray-200 hover:bg-gray-100"
+                                className="md:hidden p-2 rounded-lg text-white"
                             >
-                                <Menu size={20} />
+                                <Menu size={25} /> 
                             </button>
                         </div>
                     </div>
@@ -89,11 +88,11 @@ export default function MainNavbar() {
                             animate={{ x: 0 }}
                             exit={{ x: "100%" }}
                             transition={{ duration: 0.3 }}
-                            className="fixed top-0 right-0 h-screen w-3/4 sm:w-1/2 bg-white border-l border-gray-200 px-5 py-6 md:hidden z-50 flex flex-col"
+                            className="fixed top-0 right-0 h-screen w-3/4 sm:w-1/2 bg-black px-5 py-6 md:hidden z-50 flex flex-col"
                         >
-                            <ul className="flex flex-col gap-5 font-medium text-gray-800 text-sm">
+                            <ul className="flex flex-col gap-5 font-medium text-white text-sm">
                                 {navLinks.map((link) => (
-                                    <Link key={link.name} href={link.href} className="hover:text-black">
+                                    <Link key={link.name} href={link.href}>
                                         {link.name}
                                     </Link>
                                 ))}
