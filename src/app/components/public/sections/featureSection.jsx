@@ -32,21 +32,23 @@ export default function FeatureSection() {
                         <div className="space-y-4">
                             <p className="text-2xl lg:text-3xl font-semibold text-gray-900 leading-tight">
                                 From notes to projects, discover tools that make your work
-                                <span className="text-gray-600"> easier and more organized</span>
+                                <span className="text-[#626262]"> easier and more organized</span>
                             </p>
                             <div className="flex items-center gap-2">
                                 <Link
                                     href=""
-                                    className="border border-gray-200 px-5 py-2 rounded-full"
+                                    className="border border-gray-200 px-5 py-2 rounded-full hover:scale-105 duration-300"
                                 >
                                     <span>Try Now</span>
                                 </Link>
                                 <Link
                                     href=""
-                                    className="border border-gray-200 rounded-full bg-black flex items-center justify-center w-10 h-10"
+                                    className="border border-gray-200 rounded-full bg-black flex items-center justify-center w-10 h-10 group overflow-hidden relative"
                                 >
-                                    <ArrowUpRight className="text-white" />
+                                    <ArrowUpRight className="text-white transform transition-all duration-300 group-hover:translate-x-2 group-hover:-translate-y-2 group-hover:opacity-0" />
+                                    <ArrowUpRight className="text-white absolute transform translate-x-[-10px] translate-y-[10px] opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100" />
                                 </Link>
+
                             </div>
                         </div>
                     </div>
@@ -55,7 +57,7 @@ export default function FeatureSection() {
                         {features.map((feature, index) => (
                             <div
                                 key={index}
-                                className="p-6 bg-black rounded-2xl h-[160px] md:h-[190px]"
+                                className="p-6 bg-gradient-to-br from-black to-[#626262] rounded-2xl h-[160px] md:h-[190px]"
                             >
                                 <p className="text-white leading-relaxed">
                                     {feature}
