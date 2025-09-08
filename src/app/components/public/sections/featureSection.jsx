@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+
 export default function FeatureSection() {
     const features = [
         "Plan your daily tasks clearly and track progress with ease",
@@ -19,12 +22,33 @@ export default function FeatureSection() {
                 </div>
 
                 <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5">
-                    <div className="w-full h-[350px] md:h-[400px] rounded-2xl bg-[#F2F2F2] p-10 flex items-end">
-                        <p className="text-left text-lg font-semibold text-[#333] leading-relaxed">
-                            All-in-one workspace to capture ideas, manage projects,
-                            and stay focused designed to keep your workflow simple,
-                            efficient, and always organized.
-                        </p>
+                    <div className="w-full h-[350px] md:h-[400px] rounded-2xl bg-[#F2F2F2]/60 p-10 flex flex-col justify-between">
+                        <div className="flex">
+                            <div className="border border-gray-200 px-5 py-2 rounded-full">
+                                <span>Features</span>
+                            </div>
+                        </div>
+
+                        <div className="space-y-4">
+                            <p className="text-2xl lg:text-3xl font-semibold text-gray-900 leading-tight">
+                                From notes to projects, discover tools that make your work
+                                <span className="text-gray-600"> easier and more organized</span>
+                            </p>
+                            <div className="flex items-center gap-2">
+                                <Link
+                                    href=""
+                                    className="border border-gray-200 px-5 py-2 rounded-full"
+                                >
+                                    <span>Try Now</span>
+                                </Link>
+                                <Link
+                                    href=""
+                                    className="border border-gray-200 rounded-full bg-black flex items-center justify-center w-10 h-10"
+                                >
+                                    <ArrowUpRight className="text-white" />
+                                </Link>
+                            </div>
+                        </div>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
